@@ -1,0 +1,159 @@
+.hero {
+  background: linear-gradient(
+    to right,
+    rgb(243, 231, 255),
+    rgba(159, 102, 215, 0.8),
+    rgba(150, 3, 255, 0.8)
+  );
+  animation: fadeIn 2s ease-in-out;
+  overflow: hidden;
+}
+
+.heroContainer {
+  margin: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.textContainer {
+  flex: 1;
+  animation: slideInLeft 2s ease-in-out;
+}
+
+.heroName {
+  font-size: 72px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: black;
+}
+
+.heroRole {
+  font-size: 36px;
+  font-weight: 600;
+  color: black;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 60vh;
+  overflow: hidden;
+  animation: slideInRight 2s ease-in-out;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.bioButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  margin-top: 40px;
+  background-color: rgba(102, 51, 153, 0.8);
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.bioButton:hover {
+  background-color: indigo;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroContainer {
+    margin: 0 20px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroName {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .heroRole {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .bioButton {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heroContainer {
+    margin: 0 10px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .heroName {
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  .heroRole {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .imageContainer {
+    margin-top: 20px;
+    max-width: 100%;
+    min-height: 50vh;
+  }
+
+  .bioButton {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+}

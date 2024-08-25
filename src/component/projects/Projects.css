@@ -1,0 +1,47 @@
+/* Projects.css */
+.projects {
+  margin: 50px 100px;
+}
+
+.projects h1 {
+  font-size: 56px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #f0f0f0;
+  margin-right: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.tab.active {
+  background-color: rebeccapurple;
+  color: white;
+}
+
+.projectsContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 80px;
+}
+
+@media screen and (max-width: 480px) {
+  .tabs {
+    flex-direction: column;
+  }
+  .projectsContent {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 20px;
+  }
+}

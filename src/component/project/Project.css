@@ -1,0 +1,46 @@
+.project {
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 400px;
+}
+
+.projectImage {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s;
+  width: 100%;
+}
+.layer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 0;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.819), #43004e);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: height 0.5s;
+  overflow: hidden;
+  color: aliceblue;
+  gap: 20px;
+  padding: 0 20px;
+}
+.projecticon {
+  cursor: pointer;
+  font-size: 56px !important;
+  color: white;
+}
+
+.project:hover .layer {
+  height: 100%;
+}
+
+.projectImage:hover {
+  scale: 1.2;
+}

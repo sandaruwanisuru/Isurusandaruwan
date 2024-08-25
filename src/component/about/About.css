@@ -1,0 +1,156 @@
+.about {
+  margin: 0 100px;
+}
+
+.about h1 {
+  font-size: 56px;
+  margin-bottom: 50px;
+}
+
+.about .container {
+  display: flex;
+  gap: 100px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.aboutImage {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 25%;
+  max-width: 300px;
+  margin-bottom: 40px;
+}
+
+.aboutImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 65%;
+  min-height: 320px;
+}
+
+.tab {
+  display: flex;
+  margin: 15px 0;
+  border: 2px solid rebeccapurple;
+  border-radius: 20px;
+}
+
+.tabLink {
+  border-radius: 20px;
+  padding: 15px 20px;
+  text-align: center;
+  cursor: pointer;
+  flex: 1;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tabLink:hover {
+  background-color: rgba(102, 51, 153, 0.1);
+}
+
+.activeLink {
+  background-color: rebeccapurple;
+  color: white;
+}
+
+.tabContents {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  transition: height 0.3s ease-in-out;
+}
+
+.tabcontent {
+  margin: 20px 0;
+  display: none;
+}
+
+.activeTab {
+  display: block;
+}
+
+.tabcontent p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.tabcontent span {
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    margin: 0 50px;
+  }
+
+  .about .container {
+    gap: 50px;
+  }
+
+  .aboutText {
+    flex-basis: 100%;
+  }
+
+  .aboutImage {
+    flex-basis: 100%;
+    max-width: 200px;
+    margin: 0 auto 40px auto;
+  }
+
+  .tabContents {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about {
+    margin: 0 20px;
+  }
+
+  .about h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .about .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .aboutImage {
+    flex-basis: 100%;
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+
+  .aboutText {
+    flex-basis: 100%;
+  }
+
+  .tabLink {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .tabContents {
+    gap: 10px;
+  }
+
+  .tabcontent p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
